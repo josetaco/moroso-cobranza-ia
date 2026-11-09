@@ -1,0 +1,36 @@
+texto,tema,segmento,producto
+"Puedes pagar tu crédito desde la app del banco, banca por internet, agentes autorizados, ventanilla o transferencia interbancaria.",canales_pago,todos,todos
+"Los pagos realizados por transferencia se acreditan el mismo día hábil si se envían antes de las 6:00 p. m.",canales_pago,todos,todos
+"Si el pago se realiza en ventanilla o agente, conserva el voucher y envía una foto por el canal de atención.",canales_pago,todos,todos
+"Los intereses moratorios se calculan sobre el saldo de capital vencido y se generan por cada día de atraso, según la tasa del contrato.",intereses,todos,todos
+"Los gastos de cobranza y las comisiones se detallan en el contrato y en el estado de cuenta; no se cobran conceptos no informados.",intereses,todos,todos
+"El fraccionamiento permite dividir la deuda en cuotas, previa evaluación y pago inicial. Las condiciones dependen del segmento de mora.",fraccionamiento,todos,todos
+"En mora temprana se puede registrar una promesa de pago dentro de los siguientes 7 días.",fraccionamiento,temprana,todos
+"En mora media se puede evaluar un plan de hasta 3 cuotas con un pago inicial mínimo del 30%.",fraccionamiento,media,todos
+"En mora tardía se puede evaluar un plan de hasta 6 cuotas con un pago inicial mínimo del 20%, sujeto a aprobación.",fraccionamiento,tardia,todos
+"La reestructuración y el refinanciamiento requieren evaluación de un especialista y no se cierran en este canal.",reestructuracion,todos,todos
+"Si el crédito ya está en cobranza judicial o castigada, el caso se deriva a un especialista para revisar las alternativas disponibles.",cobranza_judicial,todos,todos
+"El cliente tiene derecho a recibir información clara, veraz y oportuna sobre su deuda, los intereses y los gastos asociados.",derechos_cliente,todos,todos
+"El cliente puede solicitar el detalle de su deuda y los conceptos que la componen por los canales oficiales de atención.",derechos_cliente,todos,todos
+"El horario de contacto para gestiones de cobranza es de lunes a viernes de 8:00 a. m. a 8:00 p. m. y sábados de 9:00 a. m. a 1:00 p. m.",horarios_contacto,todos,todos
+"No se realizan llamadas ni mensajes fuera del horario permitido ni en días feriados.",horarios_contacto,todos,todos
+"La información de la deuda es confidencial. No se revela a familiares, vecinos, compañeros de trabajo ni terceros no autorizados.",privacidad,todos,todos
+"Los datos personales se tratan conforme a la política de privacidad y la normativa de protección de datos aplicable.",privacidad,todos,todos
+"El incumplimiento de pago puede generar intereses moratorios y reportes negativos en centrales de riesgo, según el contrato y la normativa.",centrales_riesgo,todos,todos
+"Si el cliente no está de acuerdo con su reporte en centrales de riesgo, puede presentar un reclamo por los canales oficiales.",centrales_riesgo,todos,todos
+"Los reclamos se registran en el Libro de Reclamaciones y se atienden en los plazos establecidos por la normativa de protección al consumidor.",reclamos,todos,todos
+"Si el titular fallece, la gestión se suspende y se deriva al equipo de sucesiones para orientar a los herederos.",fallecimiento,todos,todos
+"Si el cliente informa una enfermedad grave, discapacidad o situación de vulnerabilidad, el caso se deriva a un especialista para una atención adecuada.",vulnerabilidad,todos,todos
+"Si el cliente reporta un fraude o suplantación, se bloquea la gestión de cobro y se deriva al equipo de seguridad.",fraude,todos,todos
+"La carta de no adeudo se emite cuando el crédito está cancelado en su totalidad y no existen obligaciones pendientes.",carta_no_adeudo,todos,todos
+"El convenio de pago debe constar por escrito o en el canal digital habilitado, con fecha, monto, cuotas y canal de pago.",convenio_pago,todos,todos
+"El incumplimiento de un convenio de pago puede dejar sin efecto las facilidades otorgadas y reactivar la cobranza.",incumplimiento,todos,todos
+"El garante o fiador puede ser contactado únicamente para informarle su obligación, sin revelar datos del deudor que no correspondan.",garantes,todos,todos
+"En créditos hipotecarios, la evaluación de facilidades considera el saldo total, la garantía y la capacidad de pago del cliente.",fraccionamiento,todos,hipotecario
+"En tarjetas de crédito, el pago mínimo no cancela la deuda total y puede generar intereses sobre el saldo revolvente.",producto,todos,tarjeta
+"En créditos de consumo, el cliente puede solicitar el detalle de cuotas, intereses y gastos por los canales oficiales.",producto,todos,consumo
+"El pago parcial se aplica primero a los conceptos vencidos según el orden establecido en el contrato.",pagos,todos,todos
+"La condonación de intereses o gastos no es automática y requiere evaluación y autorización de un especialista.",condonacion,todos,todos
+"Si el cliente realizó un pago duplicado, debe enviar los comprobantes para que el equipo de operaciones realice la validación.",pagos,todos,todos
+"El proceso de cobranza busca que el cliente regularice su deuda; el agente no toma decisiones legales ni garantiza resultados.",proceso_cobranza,todos,todos
+"Para cualquier consulta fuera del proceso de cobranza, el cliente será derivado a un asesor humano.",proceso_cobranza,todos,todos

@@ -1,0 +1,9 @@
+cliente_id,dni,fecha_nacimiento,nombre,producto,saldo_capital,intereses,moras,gastos,total_deuda,dias_mora,fecha_vencimiento,estado_cartera
+CLI001,70123456,1987-03-15,Ana Torres,credito_consumo,3500.00,180.50,60.00,40.00,3780.50,45,2026-09-15,prejudicial
+CLI002,71234567,1979-11-02,Luis Pérez,credito_hipotecario,17500.00,650.00,200.00,150.00,18500.00,120,2026-06-30,prejudicial
+CLI003,72345678,1992-07-21,María Gómez,tarjeta_credito,780.00,40.00,20.00,10.00,850.00,15,2026-10-20,prejudicial
+CLI004,73456789,1985-01-10,Carlos Ruiz,credito_consumo,1200.00,60.00,30.00,20.00,1310.00,0,2026-11-10,prejudicial
+CLI005,74567890,1990-05-25,José Díaz,credito_consumo,9500.00,400.00,120.00,80.00,10100.00,95,2026-08-05,prejudicial
+CLI006,75678901,1982-09-30,Rosa Vargas,tarjeta_credito,25000.00,1200.00,300.00,200.00,26700.00,150,2026-06-01,judicial
+CLI007,76789012,1995-12-05,Diego Flores,credito_consumo,450.00,20.00,10.00,5.00,485.00,35,2026-09-30,prejudicial
+CLI008,77890123,1975-04-18,Patricia Rojas,credito_hipotecario,8000.00,300.00,80.00,50.00,8430.00,60,2026-09-01,castigada
