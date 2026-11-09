@@ -1,14 +1,47 @@
 # Moroso
 
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Gemini](https://img.shields.io/badge/Google-Gemini-4285F4?logo=google&logoColor=white)](https://ai.google.dev/)
+[![LangChain](https://img.shields.io/badge/LangChain-1.x-1C3C3C?logo=langchain&logoColor=white)](https://python.langchain.com/)
+[![Next.js](https://img.shields.io/badge/Next.js-16-000000?logo=nextdotjs&logoColor=white)](https://nextjs.org/)
+![Tests](https://img.shields.io/badge/tests-12%20passed-brightgreen)
+![Demo](https://img.shields.io/badge/demo-local-blue)
+
 Asistente virtual de **cobranza y recuperación de cartera** con IA generativa. Verifica la identidad del cliente, le informa su situación de deuda, ofrece alternativas de pago autorizadas, registra compromisos y deriva los casos complejos a un especialista.
 
 > Demo con datos ficticios. No procesa pagos reales ni toma decisiones legales. Antes de usarlo en producción hay que validar las políticas con el negocio, integrar el core bancario y cumplir la normativa aplicable.
 
 | | Enlace |
 |---|---|
+| **Repositorio** | [github.com/josetaco/moroso-cobranza-ia](https://github.com/josetaco/moroso-cobranza-ia) |
 | API local | http://localhost:8080 |
 | Documentación interactiva | http://localhost:8080/docs |
 | Frontend local | http://localhost:3000 |
+| API key de Gemini | [aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey) |
+
+---
+
+## Qué puede hacer Moroso
+
+- **Verificar identidad** con DNI y fecha de nacimiento antes de revelar cualquier dato de deuda.
+- **Consultar y explicar** el saldo, intereses, moras, gastos, días de atraso y vencimiento.
+- **Clasificar la intención** del cliente: pago hoy, promesa, facilidades, ya pagó, no puede pagar o no reconoce la deuda.
+- **Ofrecer solo alternativas autorizadas** por reglas de negocio: pago total, promesa o planes de 3/6 cuotas.
+- **Registrar compromisos** con fecha, monto y canal validados.
+- **Responder dudas de política** con RAG: canales, derechos, intereses, fraccionamiento, privacidad y casos especiales.
+- **Derivar a un especialista** ante disputas, fraude, vulnerabilidad, cartera judicial/castigada o montos altos.
+- **Proteger la información**: DNI enmascarado, estado público sin PII sensible y sin alertas internas.
+
+### Demo rápida
+
+Ejecuta el proyecto en local y prueba con:
+
+| Cliente | DNI | Fecha de nacimiento | Caso |
+|---|---|---|---|
+| Ana Torres | `70123456` | `15/03/1987` | Mora media, deuda S/ 3,780.50, plan de 3 cuotas |
+
+Más casos en [Datos de prueba](#datos-de-prueba).
 
 ---
 
@@ -60,21 +93,21 @@ flowchart LR
 
 | Capa | Tecnología |
 |---|---|
-| Modelo de lenguaje | Google Gemini (`gemini-3.6-flash` por defecto) |
-| Embeddings | Google Gemini (`models/gemini-embedding-001`) |
-| Agente | LangChain 1.x (`create_agent`) + LangGraph (`InMemorySaver`) |
-| RAG | LangChain (`GoogleGenerativeAIEmbeddings`, `InMemoryVectorStore`) |
-| Backend | Python 3.11+, FastAPI, Uvicorn, Pandas |
-| Frontend | Next.js 16, React 19, react-markdown |
-| Despliegue | Google Cloud Run, Secret Manager, Vercel |
-| Pruebas | Pytest (sin llamadas a Gemini: embeddings y agente simulados) |
+| Modelo de lenguaje | [Google Gemini](https://ai.google.dev/) (`gemini-3.6-flash` por defecto) |
+| Embeddings | [Google Gemini](https://ai.google.dev/gemini-api/docs/embeddings) (`models/gemini-embedding-001`) |
+| Agente | [LangChain](https://python.langchain.com/) 1.x (`create_agent`) + [LangGraph](https://langchain-ai.github.io/langgraph/) (`InMemorySaver`) |
+| RAG | [LangChain](https://python.langchain.com/) (`GoogleGenerativeAIEmbeddings`, `InMemoryVectorStore`) |
+| Backend | [Python](https://www.python.org/) 3.11+, [FastAPI](https://fastapi.tiangolo.com/), Uvicorn, Pandas |
+| Frontend | [Next.js](https://nextjs.org/) 16, React 19, react-markdown |
+| Despliegue | [Google Cloud Run](https://cloud.google.com/run), Secret Manager, [Vercel](https://vercel.com/) |
+| Pruebas | [Pytest](https://docs.pytest.org/) (sin llamadas a Gemini: embeddings y agente simulados) |
 
 ---
 
 ## Estructura del código
 
 ```
-Agente/
+moroso-cobranza-ia/
 ├── backend/
 │   ├── app/
 │   │   ├── main.py               API FastAPI: /chat y /health
@@ -244,6 +277,16 @@ pytest -q
 
 ---
 
+## Estado del proyecto
+
+- Backend y frontend funcionales.
+- Flujo completo validado con Gemini: identificación, deuda, RAG, plan de 3 cuotas y cierre como `acuerdo_pago`.
+- 12 pruebas automáticas aprobadas.
+- Demo local con datos ficticios; el despliegue público queda pendiente.
+- Para producción: autenticación, rate limiting, persistencia, auditoría y revisión legal.
+
+---
+
 ## Datos de prueba
 
 | Cliente | DNI | Fecha de nacimiento | Caso |
@@ -320,4 +363,10 @@ gcloud run deploy moroso-api \
 
 ---
 
-Datos ficticios para demo.
+## Autor
+
+**@josetaco** — [github.com/josetaco](https://github.com/josetaco)
+
+## Licencia
+
+Proyecto publicado como demo educativa. Todos los derechos reservados. Para uso comercial o adaptación a producción, contacta al autor.
