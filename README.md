@@ -251,24 +251,6 @@ pytest -q
 - 12 pruebas automáticas aprobadas.
 - Demo local con datos ficticios; el despliegue público queda pendiente.
 - Para producción: autenticación, rate limiting, persistencia, auditoría y revisión legal.
-
----
-
-## Datos de prueba
-
-| Cliente | DNI | Fecha de nacimiento | Caso |
-|---|---|---|---|
-| Ana Torres | 70123456 | 15/03/1987 | Mora media, plan de 3 cuotas |
-| Luis Pérez | 71234567 | 02/11/1979 | Mora tardía, plan de 3 o 6 cuotas |
-| María Gómez | 72345678 | 21/07/1992 | Mora temprana, pago total |
-| Carlos Ruiz | 73456789 | 10/01/1985 | Preventiva, sin mora |
-| José Díaz | 74567890 | 25/05/1990 | Mora tardía, opciones de pago |
-| Rosa Vargas | 75678901 | 30/09/1982 | Cartera judicial, derivar |
-| Diego Flores | 76789012 | 05/12/1995 | Deuda menor a S/ 500, solo pago total |
-| Patricia Rojas | 77890123 | 18/04/1975 | Cartera castigada, derivar |
-
----
-
 ## Despliegue
 
 ### Backend en Google Cloud Run
