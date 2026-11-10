@@ -55,39 +55,6 @@ La cobranza manual repite las mismas preguntas, no siempre aplica las mismas alt
 
 ---
 
-## Arquitectura
-
-```mermaid
-flowchart LR
-    U[Cliente] --> FE[Frontend Next.js<br/>Vercel]
-    FE -- "POST /chat" --> API[API FastAPI<br/>Cloud Run]
-    subgraph Backend [Microservicio en Cloud Run]
-        API --> AG[Agente LangChain<br/>Gemini + memoria por sesión]
-        AG --> T1[verificar_identidad]
-        AG --> T2[consultar_deuda]
-        AG --> T3[actualizar_estado]
-        AG --> T4[calcular_opciones_pago]
-        AG --> T5[registrar_compromiso]
-        AG --> T6[finalizar_gestion]
-        AG --> T7[derivar_a_asesor]
-        AG --> T8[consultar_base_documental]
-        T8 --> VS[(Vector store<br/>InMemoryVectorStore)]
-        KB[politicas_cobranza.csv] -- "ingesta al arrancar" --> VS
-        T1 --> C[(cartera_demo.csv)]
-        T4 --> R[Reglas de negocio<br/>segmentos, cuotas y derivación]
-        T6 --> R
-    end
-    SM[Secret Manager] -. "GOOGLE_API_KEY" .-> API
-```
-
-**Flujo de una consulta:**
-1. El frontend envía el mensaje y el `session_id` a `POST /chat`.
-2. El agente decide qué herramienta usar.
-3. Las herramientas validan identidad, deuda y reglas de negocio.
-4. La API devuelve la respuesta y el estado público del caso.
-5. El frontend muestra el chat y el panel **Mi caso**.
-
----
 
 ## Stack tecnológico
 
