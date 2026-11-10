@@ -32,15 +32,6 @@ Asistente virtual de **cobranza y recuperación de cartera** con IA generativa. 
 - **Responder dudas de política** con RAG: canales, derechos, intereses, fraccionamiento, privacidad y casos especiales.
 - **Derivar a un especialista** ante disputas, fraude, vulnerabilidad, cartera judicial/castigada o montos altos.
 - **Proteger la información**: DNI enmascarado, estado público sin PII sensible y sin alertas internas.
-
-### Demo rápida
-
-Ejecuta el proyecto en local y prueba con:
-
-| Cliente | DNI | Fecha de nacimiento | Caso |
-|---|---|---|---|
-| Ana Torres | `70123456` | `15/03/1987` | Mora media, deuda S/ 3,780.50, plan de 3 cuotas |
-
 Más casos en [Datos de prueba](#datos-de-prueba).
 
 ---
